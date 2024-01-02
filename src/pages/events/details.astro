@@ -1,9 +1,96 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+// import { Image } from "astro:assets";
+// import eventBg from "../../images/event-image.png"
 ---
 
 <Layout title="Event Details" description="tech" keywords="" image="">
-  <section>
-    <h1 class="text-5xl">Hello World Welcome whey you go</h1>
+  <section class="w-full h-screen py-40 overflow-hidden">
+    <div class="container bg-gray-200 w-[1142px] h-[179px] mx-auto rounded-3xl">
+      <div class="grid grid-cols-[1fr_auto] w-[751px] h-[152px] p-0 lg:px-4 md:gap-2">
+        <div class="w-[751px] h-[152px] px-4">
+          <!-- breadcrumb -->
+          <nav class="text-gray-700 text-sm mb-4 pt-2" aria-label="Breadcrumb">
+            <ol class="list-none p-0 inline-flex">
+              <li class="flex items-center">
+                <a href="#">Events</a>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="17"
+                  viewBox="0 0 16 17"
+                  fill="none"
+                >
+                  <path
+                    d="M6 12.5L10 8.5L6 4.5"
+                    stroke="#8F8F8F"
+                    stroke-width="1.33333"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"></path></svg
+                >
+              </li>
+              <li class="flex items-center">
+                <a href="#" aria-current="page">Event Details</a>
+              </li>
+            </ol>
+          </nav>
+          <!-- text -->
+          <div
+            class="flex items-center justify-center col-span-1 text-gray-900 text-4xl font-semibold"
+          >
+            Sustainable development of Tech skills among local communities
+          </div>
+          <div class="pt-2 inline-flex">
+            <a href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M18 22C19.6569 22 21 20.6569 21 19C21 17.3431 19.6569 16 18 16C16.3431 16 15 17.3431 15 19C15 20.6569 16.3431 22 18 22Z"
+                  stroke="gray"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M6 15C7.65685 15 9 13.6569 9 12C9 10.3431 7.65685 9 6 9C4.34315 9 3 10.3431 3 12C3 13.6569 4.34315 15 6 15Z"
+                  stroke="gray"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M8.58997 13.5098L15.42 17.4898"
+                  stroke="gray"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M18 8C19.6569 8 21 6.65685 21 5C21 3.34315 19.6569 2 18 2C16.3431 2 15 3.34315 15 5C15 6.65685 16.3431 8 18 8Z"
+                  stroke="gray"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M15.41 6.50977L8.58997 10.4898"
+                  stroke="gray"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- image -->
+        <div
+          class="w-[359px] h-[179px] shrink-0 bg-no-repeat bg-cover bg-center rounded-tr-[16px] rounded-br-[16px]"
+          style="background-image: url('/event-image.png');"
+        >
+          <!-- <img src="/event-image.png" alt="event page background" class="w-full h-full object-cover"> -->
+        </div>
+      </div>
+    </div>
   </section>
 </Layout>
