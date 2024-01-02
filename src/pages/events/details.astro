@@ -2,10 +2,12 @@
 import Layout from "../../layouts/Layout.astro";
 // import { Image } from "astro:assets";
 // import eventBg from "../../images/event-image.png"
+import Button from "../../components/element/Button.astro";
 ---
 
 <Layout title="Event Details" description="tech" keywords="" image="">
-  <section class="w-full h-screen py-40 overflow-hidden">
+  <section class="w-full pt-40 overflow-hidden">
+    <!-- title section -->
     <div class="container bg-gray-200 w-[1142px] h-[179px] mx-auto rounded-3xl">
       <div class="grid grid-cols-[1fr_auto] w-[751px] h-[152px] p-0 lg:px-4 md:gap-2">
         <div class="w-[751px] h-[152px] px-4">
@@ -35,9 +37,7 @@ import Layout from "../../layouts/Layout.astro";
             </ol>
           </nav>
           <!-- text -->
-          <div
-            class="flex items-center justify-center col-span-1 text-gray-900 text-4xl font-semibold"
-          >
+          <div class="text-gray-900 text-4xl font-semibold">
             Sustainable development of Tech skills among local communities
           </div>
           <div class="pt-2 inline-flex">
@@ -85,11 +85,197 @@ import Layout from "../../layouts/Layout.astro";
         </div>
         <!-- image -->
         <div
-          class="w-[359px] h-[179px] shrink-0 bg-no-repeat bg-cover bg-center rounded-tr-[16px] rounded-br-[16px]"
+          class="w-[359px] h-[179px] bg-no-repeat bg-cover bg-center rounded-tr-[16px] rounded-br-[16px]"
           style="background-image: url('/event-image.png');"
         >
           <!-- <img src="/event-image.png" alt="event page background" class="w-full h-full object-cover"> -->
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex justify-between items-center w-[1142px] h-auto mx-auto overflow-hidden mt-8">
+    <!-- about section -->
+    <div class="w-[704px] h-[528px]">
+      <p class="text-xl font-medium mb-4">About</p>
+      <hr />
+      <!-- about event content -->
+      <div class="mt-4">
+        <p class="text-base text-justify text-gray-500">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur venenatis aliquam sem
+          nec commodo. Quisque lobortis, felis at cursus mattis, ligula nulla tristique augue, non
+          tristique dui sapien ut diam. Morbi nisi leo, aliquam id ligula quis, imperdiet tristique
+          nunc. Phasellus at bibendum purus, sed tincidunt ipsum. Maecenas ante libero, tincidunt ac
+          iaculis at, cursus eget nisl. Morbi in dictum felis. Phasellus dui felis, placerat in
+          blandit vel, laoreet et ligula. Quisque pharetra risus eu nisl mollis, ultrices porttitor
+          leo volutpat. Cras velit sem, ornare ut maximus vitae, malesuada ut mauris. Pellentesque
+          scelerisque nisl quis dui imperdiet interdum. Proin purus quam, rhoncus imperdiet porta
+          eget, maximus eget nisi. Donec vitae odio eu orci convallis vehicula in id ligula. Sed sit
+          amet mi porta, eleifend turpis vitae, pretium ex. Suspendisse finibus dui ligula, id
+          malesuada turpis faucibus in. Quisque tincidunt aliquam turpis vitae gravida. Duis
+          efficitur vel sem id porttitor. Nam venenatis nunc ac ante blandit, mollis posuere erat
+          scelerisque. Proin pretium tempus efficitur. Fusce commodo, diam non pellentesque tempus,
+          dolor velit iaculis tortor, a tincidunt elit neque id diam. Donec luctus nulla ut justo
+          mattis, in ultricies lectus sollicitudin. Pellentesque ac suscipit nisi. Sed neque leo,
+          ullamcorper eu neque eget, faucibus consequat dolor. In viverra faucibus lacus sed
+          consequat. Aliquam erat volutpat. Praesent et nibh at tellus imperdiet consequat. Sed
+          felis metus, dapibus in gravida vehicula, pretium ut arcu. In condimentum nec magna non
+          faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
+          himenaeos.
+        </p>
+      </div>
+    </div>
+    <!-- event details content for location, attendance, dates, and cost -->
+    <div class="w-[352px] h-[576px]">
+      <p class="text-xl font-medium mt-[22px] mb-4">Event details</p>
+      <hr class="mb-4" />
+      <!-- Location -->
+      <div class="flex items-center">
+        <div class="rounded-full bg-red-50 p-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
+              stroke="#F04438"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+              stroke="#F04438"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="ml-2 leading-6">
+          <p class="text-xl font-bold text-gray-500">Location</p>
+          <p class="font-normal text-gray-500">124, Johnson street, Asokoro, Abuja</p>
+        </div>
+      </div>
+      <!-- Attendance -->
+      <div class="flex items-center mt-8">
+        <div class="rounded-full bg-cyan-50 p-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M23 20.9999V18.9999C22.9993 18.1136 22.7044 17.2527 22.1614 16.5522C21.6184 15.8517 20.8581 15.3515 20 15.1299"
+              stroke="#06AED4"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21"
+              stroke="#06AED4"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M16 3.12988C16.8604 3.35018 17.623 3.85058 18.1676 4.55219C18.7122 5.2538 19.0078 6.11671 19.0078 7.00488C19.0078 7.89305 18.7122 8.75596 18.1676 9.45757C17.623 10.1592 16.8604 10.6596 16 10.8799"
+              stroke="#06AED4"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z"
+              stroke="#06AED4"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="ml-2 leading-6">
+          <p class="text-xl font-bold text-gray-500">Attendance</p>
+          <p class="font-normal text-gray-500">Physical + Online</p>
+        </div>
+      </div>
+      <!-- Date & Time -->
+      <div class="flex mt-8">
+        <div class="rounded-full bg-[#FFFAEB] p-2 w-10 h-10">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z"
+              stroke="#F79009"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M3 10H21"
+              stroke="#F79009"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M16 2V6"
+              stroke="#F79009"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M8 2V6"
+              stroke="#F79009"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="ml-2">
+          <p class="text-xl font-bold text-gray-500">Date & Time</p>
+          <div class="flex mt-2">
+            <div class="mr-8">
+              <p class="text-xs text-gray-700">From</p>
+              <p class="text-gray-500">June 30th</p>
+              <p class="text-gray-500">10:00 GMT +1</p>
+            </div>
+            <div>
+              <p class="text-xs text-gray-700">To</p>
+              <p class="text-gray-500">July 3rd</p>
+              <p class="text-gray-500">16:00 GMT +1</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Cost -->
+      <div class="flex items-center mt-8">
+        <div class="rounded-full bg-green-50 p-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M7 16C8 17 10 18 12 18M12 18C14.5 18 17 17.5 17 15C17 12.5 14.5495 12 12 12M12 18V12M12 18V21M12 12C9.5 12 7 11.5 7 9C7 6.5 9.5 6 12 6M12 12V6M12 6C14 6 16 7 17 8M12 6V3"
+              stroke="#17B26A"
+              stroke-width="2"></path>
+          </svg>
+        </div>
+        <div class="ml-2 leading-6">
+          <p class="text-xl font-bold text-gray-500">Cost</p>
+          <p class="font-normal text-gray-500">Free</p>
+        </div>
+      </div>
+
+      <div class="flex items-center mt-8 gap-4">
+        <Button href="#" label="Register" style="primary" size="md" />
+        <Button href="#" label="icon" style="secondary" size="md" />
       </div>
     </div>
   </section>
