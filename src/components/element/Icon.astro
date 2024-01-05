@@ -5,12 +5,13 @@ interface Props {
   width: string;
   height: string;
   bgColor: string;
+  rounded: string;
 }
 
-const { svgPaths, color, width, height, bgColor } = Astro.props;
+const { svgPaths, color, width, height, bgColor, rounded } = Astro.props;
 ---
 
-<div class={`rounded-full ${bgColor} p-2 w-10 h-10`}>
+<div class={`rounded-${rounded} ${bgColor} p-2 w-10 h-10`}>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}

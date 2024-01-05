@@ -1,8 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-// import { Image } from "astro:assets";
-// import eventBg from "../../images/event-image.png"
 import Button from "../../components/element/Button.astro";
+import Icon from "../../components/element/Icon.astro"
 ---
 
 <Layout title="Event Details" description="tech" keywords="" image="">
@@ -146,32 +145,12 @@ import Button from "../../components/element/Button.astro";
       <hr class="mb-4" />
       <!-- Location -->
       <div class="flex items-center">
-        <div class="rounded-full bg-red-50 p-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
-              stroke="#F04438"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-            </path>
-            <path
-              d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
-              stroke="#F04438"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-            </path>
-          </svg>
-        </div>
+        <!-- using the icon component -->
+        <Icon svgPaths={[
+          "M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z",
+          "M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z", ]}
+          color="#F04438"  width="24" height="24" bgColor="bg-[#Fef3f2]" rounded="full" />
+
         <div class="ml-2 leading-6">
           <p class="text-xl font-bold text-gray-500">Location</p>
           <p class="font-normal text-gray-500">124, Johnson street, Asokoro, Abuja</p>
@@ -179,48 +158,14 @@ import Button from "../../components/element/Button.astro";
       </div>
       <!-- Attendance -->
       <div class="flex items-center mt-8">
-        <div class="rounded-full bg-cyan-50 p-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M23 20.9999V18.9999C22.9993 18.1136 22.7044 17.2527 22.1614 16.5522C21.6184 15.8517 20.8581 15.3515 20 15.1299"
-              stroke="#06AED4"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-            </path>
-            <path
-              d="M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21"
-              stroke="#06AED4"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-            </path>
-            <path
-              d="M16 3.12988C16.8604 3.35018 17.623 3.85058 18.1676 4.55219C18.7122 5.2538 19.0078 6.11671 19.0078 7.00488C19.0078 7.89305 18.7122 8.75596 18.1676 9.45757C17.623 10.1592 16.8604 10.6596 16 10.8799"
-              stroke="#06AED4"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-            </path>
-            <path
-              d="M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z"
-              stroke="#06AED4"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-            </path>
-          </svg>
-        </div>
+        <!-- using the icon component -->
+        <Icon svgPaths={[
+          "M23 20.9999V18.9999C22.9993 18.1136 22.7044 17.2527 22.1614 16.5522C21.6184 15.8517 20.8581 15.3515 20 15.1299",
+          "M17 21V19C17 17.9391 16.5786 16.9217 15.8284 16.1716C15.0783 15.4214 14.0609 15 13 15H5C3.93913 15 2.92172 15.4214 2.17157 16.1716C1.42143 16.9217 1 17.9391 1 19V21",
+          "M16 3.12988C16.8604 3.35018 17.623 3.85058 18.1676 4.55219C18.7122 5.2538 19.0078 6.11671 19.0078 7.00488C19.0078 7.89305 18.7122 8.75596 18.1676 9.45757C17.623 10.1592 16.8604 10.6596 16 10.8799",
+          "M9 11C11.2091 11 13 9.20914 13 7C13 4.79086 11.2091 3 9 3C6.79086 3 5 4.79086 5 7C5 9.20914 6.79086 11 9 11Z"]}
+          color="#06AED4" width="24" height="24" bgColor="bg-[#ECFDFF]" rounded="full" />
+
         <div class="ml-2 leading-6">
           <p class="text-xl font-bold text-gray-500">Attendance</p>
           <p class="font-normal text-gray-500">Physical + Online</p>
@@ -228,48 +173,12 @@ import Button from "../../components/element/Button.astro";
       </div>
       <!-- Date & Time -->
       <div class="flex mt-8">
-        <div class="rounded-full bg-[#FFFAEB] p-2 w-10 h-10">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z"
-              stroke="#F79009"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-            </path>
-            <path
-              d="M3 10H21"
-              stroke="#F79009"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-            </path>
-            <path
-              d="M16 2V6"
-              stroke="#F79009"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-            </path>
-            <path
-              d="M8 2V6"
-              stroke="#F79009"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-            </path>
-          </svg>
-        </div>
+       <!-- using the icon component -->
+        <Icon svgPaths={[
+          "M19 4H5C3.89543 4 3 4.89543 3 6V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V6C21 4.89543 20.1046 4 19 4Z",
+          "M3 10H21", "M16 2V6", "M8 2V6"]}
+          color="#F79009" width="24" height="24" bgColor="bg-[#FFFAEB]" rounded="full" />
+
         <div class="ml-2">
           <p class="text-xl font-bold text-gray-500">Date & Time</p>
           <div class="flex mt-2">
@@ -288,22 +197,11 @@ import Button from "../../components/element/Button.astro";
       </div>
       <!-- Cost -->
       <div class="flex items-center mt-8">
-        <div class="rounded-full bg-green-50 p-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-          >
-            <path
-              d="M7 16C8 17 10 18 12 18M12 18C14.5 18 17 17.5 17 15C17 12.5 14.5495 12 12 12M12 18V12M12 18V21M12 12C9.5 12 7 11.5 7 9C7 6.5 9.5 6 12 6M12 12V6M12 6C14 6 16 7 17 8M12 6V3"
-              stroke="#17B26A"
-              stroke-width="2"
-            >
-            </path>
-          </svg>
-        </div>
+        <!-- using the icon component -->
+        <Icon svgPaths={[
+          "M7 16C8 17 10 18 12 18M12 18C14.5 18 17 17.5 17 15C17 12.5 14.5495 12 12 12M12 18V12M12 18V21M12 12C9.5 12 7 11.5 7 9C7 6.5 9.5 6 12 6M12 12V6M12 6C14 6 16 7 17 8M12 6V3"]}
+          color="#17B26A" width="24" height="24" bgColor="bg-[#ECFDF3]" rounded="full" />
+          
         <div class="ml-2 leading-6">
           <p class="text-xl font-bold text-gray-500">Cost</p>
           <p class="font-normal text-gray-500">Free</p>
